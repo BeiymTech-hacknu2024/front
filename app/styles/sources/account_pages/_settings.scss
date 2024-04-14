@@ -1,0 +1,94 @@
+.settings {
+  flex: 2;
+
+  .inner {
+    padding: 40px 150px 0 100px;
+
+    .wrapper {
+      .form {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .info_inputs {
+          display: flex;
+          gap: 20px;
+
+          label {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+
+            span {
+              font-size: 18px;
+              font-weight: 600;
+            }
+
+            input {
+              max-width: 100%;
+            }
+          }
+        }
+
+        .form_info {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          span {
+            font-size: 18px;
+            font-weight: 600;
+          }
+
+          &>div {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            label {
+              display: flex;
+              gap: 20px;
+            }
+
+            div {
+              border-radius: 11px;
+              padding: 5px;
+              justify-content: center;
+              display: flex;
+              width: 35px;
+              height: 35px;
+            }
+          }
+        }
+
+        .buttons {
+          margin-top: 40px;
+
+          button {
+            padding: 20px 100px;
+
+            background-color: #59afff;
+            border-radius: 12px;
+            border: none;
+
+            font-size: 22px;
+            font-weight: 600;
+
+            // &:last-child {
+            //   border-radius: 12px;
+            //   border: 3px solid #59afff;
+
+            //   background: transparent;
+            //   padding: 20px 30px;
+            //   margin-left: 30px;
+
+            //   color: #000000;
+            // }
+          }
+        }
+      }
+    }
+  }
+}

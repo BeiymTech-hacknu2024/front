@@ -1,0 +1,134 @@
+.packages {
+  flex: 2;
+
+  .inner {
+    padding: 20px 40px 30px 20px;
+
+    .wrapper {
+      .main {
+        padding-top: 15px;
+        margin-top: 15px;
+        display: flex;
+        border: 1px solid #f0f0f0;
+        border-radius: 11px;
+
+        form {
+          width: 100%;
+          flex: 1;
+          padding: 16px 20px 15px 0;
+
+          // table {
+          //   height: 100%;
+          // }
+        }
+
+        .info_packages {
+          padding: 16px 20px;
+          flex: 0.35;
+
+          .search {
+            input {
+              background: #d9d9d9;
+            }
+          }
+
+          .packages_list {
+            padding: 35px 40px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .package_category {
+              .category_info {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                font-size: 14px;
+                font-weight: 500;
+                color: #292d32;
+              }
+
+              .category_list {
+                padding-left: 30px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                ul {
+                  &:first-child {
+                    margin-top: 10px;
+                  }
+
+                  .category_list_info {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                  }
+
+                  .list {
+                    padding-left: 30px;
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    ul li {
+                      &:first-child {
+                        margin-top: 10px;
+                      }
+
+                      display: flex;
+                      gap: 10px;
+                      align-items: center;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .packages_lists {
+            padding: 15px;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .info {
+              display: flex;
+              cursor: pointer;
+              flex-direction: column;
+              gap: 10px;
+            }
+
+            .info_main {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              font-size: 14px;
+              font-weight: 500;
+              color: #292d32;
+
+            }
+
+            .tasks {
+              padding-top: 10px;
+
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+
+              li {
+                align-self: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

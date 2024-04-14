@@ -1,0 +1,53 @@
+{
+  "name": "beyim",
+  "version": "1.0.0",
+  "description": "beyim report",
+  "author": "Asanali <asanaliiospan@gmail.com>",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "run-s clean build:sass build:css build:remix",
+    "build:remix": "remix build",
+    "build:css": "postcss 'app/styles/processed/**/*.css' --dir app/styles/build --base app/styles/processed --env production",
+    "build:sass": "sass --no-source-map app/styles/sources:app/styles/processed",
+    "move:map": "mv app/styles/build/**/*.map ./public/build/_assets/",
+    "clean": "rimraf ./build ./public/build ./app/styles/processed ./app/styles/build ./.cache/content-v2 ./.cache/index-v5",
+    "dev": "run-p dev:sass dev:css dev:remix",
+    "dev:remix": "remix dev",
+    "dev:css:": "postcss 'app/styles/processed/**/*.css' --dir app/styles/build --base app/styles/processed --watch",
+    "dev:sass": "sass app/styles/sources/:app/styles/processed/ --watch",
+    "start": "remix-serve ./build/index.js",
+    "check": "remix vite:dev"
+  },
+  "dependencies": {
+    "@react-spring/web": "^9.7.3",
+    "@reduxjs/toolkit": "^2.2.3",
+    "@remix-run/css-bundle": "^2.0.1",
+    "@remix-run/node": "^2.0.1",
+    "@remix-run/react": "^2.0.1",
+    "@remix-run/serve": "^2.0.1",
+    "axios": "^1.4.0",
+    "chart.js": "^4.4.2",
+    "isbot": "^3.6.8",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.0.1",
+    "@remix-run/eslint-config": "^2.0.1",
+    "autoprefixer": "^10.4.15",
+    "cross-env": "^7.0.3",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.47.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "postcss-modules": "^6.0.0",
+    "rimraf": "^5.0.1",
+    "sass": "^1.65.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

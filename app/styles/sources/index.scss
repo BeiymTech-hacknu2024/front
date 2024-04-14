@@ -1,0 +1,103 @@
+.main {
+  max-width: 1920px;
+
+  &__main {
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left {
+      background: linear-gradient(to right, #d9d9d9, #ffffff);
+      color: #1c1c1c;
+      flex: 1;
+
+      padding: 100px 100px;
+
+      & > h2 {
+        font-size: 70px;
+        font-weight: 700;
+
+        margin-bottom: 40px;
+      }
+
+      & > p {
+        font-size: 42px;
+        font-weight: 500;
+
+        margin-bottom: 40px;
+      }
+
+      & > button {
+        padding: 20px 35px;
+        border-radius: 5px;
+        background-color: #2881e1;
+        font-size: 21px;
+        font-weight: 500;
+        color: #ffffff;
+        border: none;
+
+        &:hover {
+          background-color: #62a4eb;
+        }
+
+        cursor: pointer;
+      }
+    }
+    .right {
+      flex: 1.3;
+
+      & > img {
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .differences {
+    .inner {
+      padding: 0px 150px 0px 100px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      padding: 50px 0;
+
+      justify-content: space-between;
+    }
+
+    .list {
+      padding: 0 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      text-align: center;
+
+      border-right: 1px solid #08102f96;
+
+      & > div > img {
+        height: 70px;
+      }
+
+      h3 {
+        font-size: 27px;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .possibility_1,
+  .possibility_2 {
+    display: flex;
+    gap: 15px;
+  }
+}

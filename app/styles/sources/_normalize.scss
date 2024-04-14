@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  font-family: "Roboto";
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  max-width: 1920px;
+
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 30px;
+}
+
+h3 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+span {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+  color: #ffffff;
+  // &:hover {
+  //         background-color: #62a4eb;
+  // }
+}
+
+input {
+  padding: 24px 10px;
+  border-radius: 11px;
+  border: 2px solid #cdcdcd;
+  background-color: #f4f4f5;
+  font-size: 20px;
+  color: #555555;
+
+  &::placeholder {
+    padding-left: 15px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+textarea {
+  width: 100%;
+
+  padding: 20px;
+  background: #f0f0f0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #555555;
+
+  border: none;
+  border-radius: 12px;
+}
+
+table {
+  padding: 20px;
+
+  margin: auto 0;
+  width: 100%;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  border: 2px solid #f3f3f3;
+  border-radius: 12px;
+
+  thead {
+    background-color: #f0f0f0;
+
+    tr {
+      font-size: 15px;
+
+      th {
+        font-weight: 600;
+        padding: 10px 0;
+      }
+    }
+  }
+
+  tbody {
+    tr td {
+      padding: 10px 5px;
+
+      border-left: 2px solid #f0f0f0;
+      border-bottom: 2px solid #f0f0f0;
+      border-collapse: collapse;
+
+      text-align: center;
+
+      max-width: 330px;
+      overflow-x: hidden;
+
+      // max-height: 100px;
+
+      & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      span {
+        font-size: 8px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  tfoot {
+    padding-top: 16px;
+
+    tr td {
+      padding-top: 15px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+}
+
+select {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+}
+
+@mixin noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}

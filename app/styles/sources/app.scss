@@ -1,0 +1,256 @@
+@import "./normalize";
+
+.header {
+  max-width: 1920px;
+  .inner {
+    padding: 0 150px 0 100px;
+  }
+
+  &__upper {
+    display: flex;
+    align-items: center;
+    gap: 76px;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -100px;
+      right: -150px;
+      bottom: 0;
+      border-bottom: 1px solid #000000;
+      z-index: -1;
+    }
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    img {
+      margin-left: -40px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+
+  &__links {
+    .list {
+      font-size: 17px;
+      font-weight: 400;
+      display: flex;
+      gap: 40px;
+      cursor: pointer;
+    }
+
+    li {
+      position: relative;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    .active {
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 101%;
+        height: 2px;
+        margin-top: 53px;
+        background-color: #429dff;
+      }
+    }
+  }
+
+  &__lower {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 83px;
+
+    .links {
+      display: flex;
+      gap: 80px;
+
+      li {
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -100px;
+      right: 1px;
+      margin-top: 75px;
+      height: 3px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      z-index: 2;
+    }
+
+    .right {
+      display: flex;
+      gap: 55px;
+
+      & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        a {
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #f8f8f8;
+  max-width: 1920px;
+
+  margin-top: auto;
+  .inner {
+    padding: 0px 150px 20px 100px;
+  }
+
+  .wrapper {
+    .upper {
+      display: flex;
+      justify-content: space-between;
+
+      padding-bottom: 30px;
+
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: -100px;
+        right: -150px;
+        bottom: 0;
+        border-bottom: 1px solid #000000;
+      }
+
+      // border-bottom: 2px solid #D4D4D4;
+
+      .left {
+        display: flex;
+        gap: 80px;
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            font-weight: 500;
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 700;
+          }
+
+          a {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 80px;
+        grid-row-gap: 30px;
+
+        li {
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    .lower {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: 20px;
+
+      .main {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        a {
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+
+        .logo {
+          height: 60px;
+
+          img {
+            height: 45px;
+          }
+          h2 {
+            font-size: 32px;
+          }
+        }
+
+        img {
+          margin-left: -22px;
+        }
+
+        p,
+        a {
+          color: #000000bf;
+          font-size: 17px;
+          font-weight: 400;
+        }
+
+        & > a > div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        svg {
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

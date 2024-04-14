@@ -1,0 +1,41 @@
+.support {
+  flex: 2;
+
+  .inner {
+    padding: 40px 150px 0 100px;
+
+    .wrapper {
+      h2 {
+        font-weight: 700;
+      }
+
+      p {
+        margin-top: 40px;
+        font-weight: 400;
+      }
+
+      form {
+        margin-top: 30px;
+
+        select {
+          margin: 20px 0;
+          border: 2px solid #555;
+          border-radius: 5px;
+        }
+
+        button {
+          padding: 20px 100px;
+
+          background-color: #59afff;
+          border-radius: 12px;
+          border: none;
+
+          font-size: 22px;
+          font-weight: 600;
+
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

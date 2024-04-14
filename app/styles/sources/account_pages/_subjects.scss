@@ -1,0 +1,18 @@
+.subjects {
+  display: flex;
+  gap: 20px;
+  max-width: 1920px;
+
+  .test {
+    display: flex;
+    gap: 30px;
+
+    flex-wrap: wrap;
+    // grid-template-columns: ;
+
+    & > div {
+      width: 500px;
+      height: 500px;
+    }
+  }
+}
