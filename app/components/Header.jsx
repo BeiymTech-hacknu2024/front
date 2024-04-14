@@ -75,22 +75,8 @@ export default function Header({ data }) {
                   </svg>
 
                   <div className={styles.info}>
-                    {info.user.Role === "individual" ? (
-                      <Link to={"/account/history"}>
-                        <p>{info.user.Name + " " + info.user.Surname}</p>
-                      </Link>
-                    ) : (
-                      <Link
-                        to={
-                          info.user.Role === "student"
-                            ? "/account/tasks"
-                            : "/account/history"
-                        }
-                      >
-                        <p>{info.user.Role}</p>
-                      </Link>
-                    )}
-                    <a href={`mailto:${info.user.Email}`}>{info.user.Email}</a>
+                    <p>{info.user.name}</p>
+                    <a href={`mailto:${info.user.email}`}>{info.user.email}</a>
                   </div>
                 </div>
               )}

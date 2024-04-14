@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import styles from "../styles/build/account.json";
 
-export default function ImportDoc({ folders, user, teachers }) {
+export default function ImportDoc() {
   const [showModal, setShowModal] = useState(false);
 
   return (

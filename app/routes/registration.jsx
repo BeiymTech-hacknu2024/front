@@ -31,6 +31,7 @@ export const action = async ({ request }) => {
     email: formData.get("email") ?? "",
     password: formData.get("password") ?? "",
     patronymic: "",
+    role: "student",
   };
   let response = {};
 

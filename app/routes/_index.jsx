@@ -18,7 +18,7 @@ export function links() {
 }
 
 export const loader = async ({ request }) => {
-  return redirect("/tasks");
+  return redirect("/reports");
 };
 
 export default function Index() {

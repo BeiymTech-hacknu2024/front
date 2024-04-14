@@ -26,38 +26,7 @@ export const meta = () => {
 };
 
 export const loader = async ({ request }) => {
-  const url = new URL(request.url);
-  const page = parseInt(url.searchParams.get("page") || "1", 10);
-  const limit = Math.min(
-    parseInt(url.searchParams.get("limit") || "10", 10),
-    1000
-  );
-
-  let response = {};
-
-  await apiClient
-    .get(`/reports?page=${page}&limit=${limit}`, {
-      headers: {
-        Cookie: getCookie(request.headers.get("cookie")),
-      },
-    })
-    .then((res) => {
-      response = {
-        status: "success",
-        reports: res.data.reports.map((res) => ({ ...res, Selected: false })),
-        totalCount: res.data.total_count,
-      };
-    })
-    .catch((res) => (response = { status: "error", message: res }));
-
-  await apiClient
-    .get("/folders/assigned", {
-      headers: {
-        Cookie: getCookie(request.headers.get("cookie")),
-      },
-    })
-    .then((res) => (response = { ...response, folders: res.data }))
-    .catch((res) => (response = { status: "error", message: res }));
+  const response = {};
 
   return json(response);
 };
@@ -96,8 +65,6 @@ export default function Test() {
       <Menu info={info} />
 
       <div className={styles.history}>
-        <ImportDoc folders={all_folders} user={user} />
-
         <div className={styles.inner}>
           <div className={styles.wrapper}>
             <TableHistory
